@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 		def event_params
 			#don't want to permit :source or :date_recorded, correct?
 			params.require(:event).permit(:type, :date_emitted, :payload, 
-																		:shared_secret, :user_ID, :user_agent)
+										  :shared_secret, :user_ID, :user_agent, :date_recorded, :source)
 		end
 
 end
