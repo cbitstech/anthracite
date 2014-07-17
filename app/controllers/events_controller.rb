@@ -22,11 +22,11 @@ class EventsController < ApplicationController
 		@event = Event.find(params[:id])
 
 		respond_to do |format|
-		  if @event.update(event_params)
-		    format.json { head :no_content }
-				@event.date_recorded = # timestamp from server receipt
-				@event.source = # source app or ip
-		  else
+		  	if @event.update(event_params)
+				  format.json { head :no_content }
+					# @event.date_recorded = # timestamp from server receipt
+					# @event.source = # source app or ip
+		  	else
 		    format.json { render json: @event.errors, status: :unprocessable_entity }
 		  end
 		end

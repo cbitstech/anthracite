@@ -29,6 +29,15 @@ gem 'spring',        group: :development
 # Rails_Admin for admin panel
 gem 'rails_admin'
 
+# CanCan for authorization
+gem 'cancan'
+
+# Track Changes to model data with Papertrail
+gem 'papertrail'
+
+# Devise for authentication
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
 
 	validates :type, presence: true
-	valiates :payload, presence: true
+	validates :payload, presence: true
 
 		rails_admin do
 		  configure :type do

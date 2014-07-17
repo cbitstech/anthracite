@@ -180,3 +180,1793 @@ Processing by RailsAdmin::MainController#dashboard as HTML
   Parameters: {"_pjax"=>"[data-pjax-container]"}
   Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (6.4ms)
 Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2014-07-17 11:37:27 -0500
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.2) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.2) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+  [1m[36m (241.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (143.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateEvents (20140717162413)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "date_emitted" datetime, "date_recorded" datetime, "payload" varchar(255), "shared_secret" varchar(255), "user_ID" varchar(255), "user_agent" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140717162413"]]
+  [1m[35m (153.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (0.2ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (1.4ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-17 11:38:24 -0500
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 11:38:27 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (0.3ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (0.2ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (1.7ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-17 11:50:08 -0500
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 11:50:10 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (0.3ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 11:50:14 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (0.4ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:04:53 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [POST] "/events.json"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.2ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:06:30 -0500
+
+ActionController::RoutingError (No route matches [POST] "/events.json"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.2ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:09:13 -0500
+
+SyntaxError (/home/gwen/workspace/anthracite/app/controllers/events_controller.rb:29: syntax error, unexpected keyword_else):
+  app/controllers/events_controller.rb:29: syntax error, unexpected keyword_else
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.5ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:10:58 -0500
+
+NoMethodError (undefined method `valiates' for #<Class:0x00000006920c88>):
+  app/models/event.rb:4:in `<class:Event>'
+  app/models/event.rb:1:in `<top (required)>'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:18:08 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ "event" : { "type" : "slumberbunny_log" , "payload" : "{ "open_time" : 12223343453}} , "date_emitted" : 11223344555, "shared_secret" : "adfadfafgaewtaxd", "user_ID" : "bun" , "user_agent" : "web", "source" : "localhost" } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ "event" : { "type" : "slumberbunny_log" , "payload" : "{ "open_time" : 12223343453}} , "date_emitted" : 11223344555, "shared_secret" : "adfadfafgaewtaxd", "user_ID" : "bun" , "user_agent" : "web", "source" : "localhost" } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:18:12 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ "event" : { "type" : "slumberbunny_log" , "payload" : "{ "open_time" : 12223343453}} , "date_emitted" : 11223344555, "shared_secret" : "adfadfafgaewtaxd", "user_ID" : "bun" , "user_agent" : "web", "source" : "localhost" } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ "event" : { "type" : "slumberbunny_log" , "payload" : "{ "open_time" : 12223343453}} , "date_emitted" : 11223344555, "shared_secret" : "adfadfafgaewtaxd", "user_ID" : "bun" , "user_agent" : "web", "source" : "localhost" } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:20:24 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ "event" : { "type" : "slumberbunny_log" , "payload" : 
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ "event" : { "type" : "slumberbunny_log" , "payload" : '):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:21:26 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload : 
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload : '):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:22:26 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:23:06 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.8ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:23:44 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:24:36 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 11223344555, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:26:22 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 1405625160, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : { type : slumberbunny_log , payload :  { payload { open_time : 12223343453 } } , date_emitted : 1405625160, shared_secret : adfadfafgaewtaxd, user_ID : bun , user_agent : web, source : localhost } }'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/trees" for 127.0.0.1 at 2014-07-17 14:30:11 -0500
+
+ActionController::RoutingError (No route matches [GET] "/trees"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 14:30:12 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms
+
+NoMethodError (undefined method `failure_app' for nil:NilClass):
+  devise (3.2.4) lib/devise/delegator.rb:11:in `failure_app'
+  devise (3.2.4) lib/devise/delegator.rb:5:in `call'
+  warden (1.2.3) lib/warden/manager.rb:130:in `call_failure_app'
+  warden (1.2.3) lib/warden/manager.rb:116:in `process_unauthenticated'
+  warden (1.2.3) lib/warden/manager.rb:47:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.9ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:32:41 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : {
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : {'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:33:53 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : {
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : {'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 14:34:06 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms
+
+NoMethodError (undefined method `failure_app' for nil:NilClass):
+  devise (3.2.4) lib/devise/delegator.rb:11:in `failure_app'
+  devise (3.2.4) lib/devise/delegator.rb:5:in `call'
+  warden (1.2.3) lib/warden/manager.rb:130:in `call_failure_app'
+  warden (1.2.3) lib/warden/manager.rb:116:in `process_unauthenticated'
+  warden (1.2.3) lib/warden/manager.rb:47:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started GET "/trees" for 127.0.0.1 at 2014-07-17 14:34:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/trees"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 14:34:12 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 0ms
+
+NoMethodError (undefined method `failure_app' for nil:NilClass):
+  devise (3.2.4) lib/devise/delegator.rb:11:in `failure_app'
+  devise (3.2.4) lib/devise/delegator.rb:5:in `call'
+  warden (1.2.3) lib/warden/manager.rb:130:in `call_failure_app'
+  warden (1.2.3) lib/warden/manager.rb:116:in `process_unauthenticated'
+  warden (1.2.3) lib/warden/manager.rb:47:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  remotipart (1.2.1) lib/remotipart/middleware.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 14:34:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.updated_at desc LIMIT 1[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (13.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (3.2ms)
+Completed 200 OK in 663ms (Views: 524.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:31 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.updated_at desc LIMIT 1[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (2.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (1.3ms)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:32 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-17 14:34:33 -0500
+
+
+Started GET "/admin/event?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 14:34:36 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"event"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (44.2ms)
+Completed 200 OK in 70ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-17 14:34:46 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{ event : {
+
+ActionDispatch::ParamsParser::ParseError (795: unexpected token at '{ event : {'):
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:53:in `rescue in parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:32:in `parse_formatted_parameters'
+  actionpack (4.1.2) lib/action_dispatch/middleware/params_parser.rb:23:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.2) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/admin/event" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"event"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (12.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (3.5ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-17 14:35:27 -0500
+
+
+Started GET "/admin/event?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 14:35:34 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"event"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (12.4ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-17 14:35:36 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.updated_at desc LIMIT 1[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (6.9ms)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 0.8ms)
