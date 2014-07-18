@@ -1,11 +1,18 @@
 class EventsController < ApplicationController
 
-	# protect_from_forgery with: :null_session
-
 	protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
 
 	def new
 		@event = Event.new
+	end
+
+	def index
+	@events = Event.all
+
+	respond_to do |format|
+		format.html # index.html.erb
+		format.json { render json: @events }
+		end
 	end
 
 	def create
@@ -26,7 +33,7 @@ class EventsController < ApplicationController
 		respond_to do |format|
 		  	if @event.update(event_params)
 				  format.json { head :no_content }
-					# @event.date_recorded = # timestamp from server receipt
+					# @event.date_recorded = # actually just rails timestamp
 					# @event.source = # source app or ip
 		  	else
 		    format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -43,5 +50,4 @@ class EventsController < ApplicationController
 			params.require(:event).permit(:kind, :date_emitted, :payload, 
 										  :shared_secret, :user_ID, :user_agent, :date_recorded, :source)
 		end
-
 end
