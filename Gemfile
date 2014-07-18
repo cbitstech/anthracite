@@ -38,6 +38,10 @@ gem 'papertrail'
 # Devise for authentication
 gem 'devise'
 
+# activesupport, tiny_tds for datetime support
+gem 'activesupport'
+gem 'tiny_tds'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

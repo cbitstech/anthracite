@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
 
-	protect_from_forgery with: :null_session
+	# protect_from_forgery with: :null_session
+
+	protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
 
 	def new
-			@event = Event.new
+		@event = Event.new
 	end
 
 	def create
@@ -38,8 +40,7 @@ class EventsController < ApplicationController
 
 	private
 		def event_params
-			#don't want to permit :source or :date_recorded, correct?
-			params.require(:event).permit(:type, :date_emitted, :payload, 
+			params.require(:event).permit(:kind, :date_emitted, :payload, 
 										  :shared_secret, :user_ID, :user_agent, :date_recorded, :source)
 		end
 

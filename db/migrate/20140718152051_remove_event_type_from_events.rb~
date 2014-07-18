@@ -1,0 +1,4 @@
+class RemoveEventTypeFromEvents < ActiveRecord::Migration
+  def change
+  end
+end

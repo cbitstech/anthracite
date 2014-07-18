@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140717162413) do
+ActiveRecord::Schema.define(version: 20140718152051) do
 
   create_table "events", force: true do |t|
-    t.string   "type"
     t.datetime "date_emitted"
     t.datetime "date_recorded"
     t.string   "payload"
@@ -24,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140717162413) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "kind"
   end
 
 end

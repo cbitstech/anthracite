@@ -1970,3 +1970,781 @@ Processing by RailsAdmin::MainController#dashboard as HTML
   [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.updated_at desc LIMIT 1[0m
   Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (6.9ms)
 Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-07-18 09:46:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events"
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.updated_at desc LIMIT 1[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (14.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.0ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (2.3ms)
+Completed 200 OK in 2497ms (Views: 2247.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-07-18 09:46:26 -0500
+
+
+Started GET "/admin/event?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-07-18 09:46:39 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"event"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (16.9ms)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trees" for 127.0.0.1 at 2014-07-18 09:47:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/trees"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (714.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1091.0ms)
+
+
+Started GET "/admin/event" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"event"}
+  [1m[35mEvent Load (0.1ms)[0m  SELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (6.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (2.3ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-18 09:55:11 -0500
+
+
+Started GET "/event/1" for 127.0.0.1 at 2014-07-18 09:55:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/event/1"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (14.2ms)
+
+
+Started POST "/trees.json" for 127.0.0.1 at 2014-07-18 10:00:36 -0500
+
+ActionController::RoutingError (No route matches [POST] "/trees.json"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/gwen/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (13.8ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:01:26 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"type"=>"app_crash", "date_emitted"=>"1414141414", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: app_crash is not a subclass of Event):
+  app/controllers/events_controller.rb:10:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:09:50 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"type"=>"app_crash", "date_emitted"=>"1414141414", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::SubclassNotFound (Invalid single-table inheritance type: app_crash is not a subclass of Event):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTypeFromEvents (20140718151337)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveTypeFromEvents (20140718151337)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "aevents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "date_emitted" datetime, "date_recorded" datetime, "payload" varchar(255), "shared_secret" varchar(255), "user_ID" varchar(255), "user_agent" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "events"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "events"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_emitted" datetime, "date_recorded" datetime, "payload" varchar(255), "shared_secret" varchar(255), "user_ID" varchar(255), "user_agent" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "aevents"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aevents"
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "events" ADD "event_type" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140718151337"]]
+  [1m[36m (111.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:16:32 -0500
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"event_type"=>"app_crash", "date_emitted"=>"1414141414", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Unpermitted parameters: event_type
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:18:30 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"event_type"=>"app_crash", "date_emitted"=>"1405696683", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Unpermitted parameters: event_type
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveEventTypeFromEvents (20140718152051)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "aevents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_emitted" datetime, "date_recorded" datetime, "payload" varchar(255), "shared_secret" varchar(255), "user_ID" varchar(255), "user_agent" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime, "event_type" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "events"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "events"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_emitted" datetime, "date_recorded" datetime, "payload" varchar(255), "shared_secret" varchar(255), "user_ID" varchar(255), "user_agent" varchar(255), "source" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "aevents"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aevents"
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "events" ADD "kind" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140718152051"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/events.jso" for 127.0.0.1 at 2014-07-18 10:21:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#create as 
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Unpermitted parameters: kind
+Completed 500 Internal Server Error in 4ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:22:07 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Unpermitted parameters: kind
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:24:46 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:27:12 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:35:41 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:37:34 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"2014-07-18T15:37:11+00:00", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `type' for #<Event:0x00000001c86468>):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:38:43 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1405696622", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 5ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:39:36 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"1404746283", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (argument out of range):
+  app/controllers/events_controller.rb:12:in `create'
+
+
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started POST "/events.json" for 127.0.0.1 at 2014-07-18 10:40:38 -0500
+Processing by EventsController#create as JSON
+  Parameters: {"event"=>{"kind"=>"app_crash", "date_emitted"=>"2014-06-05 10:28:00.000000", "payload"=>"some JSON", "shared_secret"=>"default", "user_ID"=>"test@email", "user_agent"=>"web"}}
+Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "events" ("created_at", "date_emitted", "kind", "payload", "shared_secret", "updated_at", "user_ID", "user_agent") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-07-18 15:40:38.448913"], ["date_emitted", "2014-06-05 10:28:00.000000"], ["kind", "app_crash"], ["payload", "some JSON"], ["shared_secret", "default"], ["updated_at", "2014-07-18 15:40:38.448913"], ["user_ID", "test@email"], ["user_agent", "web"]]
+  [1m[35m (95.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 201 Created in 130ms (Views: 0.9ms | ActiveRecord: 95.8ms)
+
+
+Started GET "/admin/event" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"event"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY events.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "events"
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (37.9ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/_secondary_navigation.html.haml (0.7ms)
+  Rendered /home/gwen/.rvm/gems/ruby-2.1.2/gems/rails_admin-0.6.2/app/views/layouts/rails_admin/pjax.html.haml (3.9ms)
+Completed 200 OK in 64ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-07-18 10:40:56 -0500

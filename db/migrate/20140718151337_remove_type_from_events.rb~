@@ -1,0 +1,6 @@
+class RemoveTypeFromEvents < ActiveRecord::Migration
+  def change
+		remove_column :type
+		add_column :event_type
+  end
+end
