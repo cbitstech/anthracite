@@ -5,10 +5,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.1'
 
 # Use pg as the database for Active Record
-gem 'pg'
+#gem 'pg'
+
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+
+gem 'turbolinks'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -26,7 +30,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
 # Rails_Admin for admin panel
 gem 'rails_admin'
@@ -40,7 +44,7 @@ gem 'papertrail'
 # Devise for authentication
 gem 'devise'
 
- 'strong_password', '~> 0'
+gem 'strong_password', '~> 0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -51,9 +55,9 @@ gem 'devise'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development, :test do
-  gem rspec-rails’, ‘~> 3.0’
-end
+ group :development, :test do
+   gem 'rspec-rails', '~> 3.0'
+ end
 
 group :development do
   gem 'rubocop', '~> 0.23'
@@ -61,10 +65,11 @@ group :development do
   gem 'capistrano', '~> 3.2.0', require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rvm', '~> 0.1', require: false
-  gem 'capistrano-bundler', '~> 1.1.2’
+  gem 'capistrano-bundler', '~> 1.1.2'
+
 end
 
 group :test do
-  gem ‘capybara’
+  gem 'capybara'
 end
 
