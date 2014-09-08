@@ -11,16 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140825202809) do
+ActiveRecord::Schema.define(version: 20140828191425) do
 
   create_table "events", force: true do |t|
-    t.datetime "date_emitted"
     t.datetime "date_recorded"
     t.string   "payload"
-    t.string   "shared_secret"
     t.string   "user_ID"
-    t.string   "user_agent"
-    t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "kind"

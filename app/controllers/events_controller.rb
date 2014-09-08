@@ -33,8 +33,6 @@ class EventsController < ApplicationController
 		respond_to do |format|
 		  	if @event.update(event_params)
 				  format.json { head :no_content }
-					# @event.date_recorded = # actually just rails timestamp, drop
-					# @event.source = # source app or ip
 		  	else
 		    format.json { render json: @event.errors, status: :unprocessable_entity }
 		  end
@@ -47,7 +45,6 @@ class EventsController < ApplicationController
 
 	private
 		def event_params
-			params.require(:event).permit(:kind, :date_emitted, :payload, 
-										  :shared_secret, :user_ID, :user_agent, :source)
+			params.require(:event).permit(:kind, :payload, :user_ID)
 		end
 end
