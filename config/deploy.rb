@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 set :application, 'anthracite'
-# set :repo_url, "git@github.com:cbitstech/#{ fetch(:application) }.git"
+set :repo_url, "git@github.com:cbitstech/#{ fetch(:application) }.git"
 set :rvm_type, :system
 set :rvm_ruby_version, '2.1.1'
 # Default branch is :master
@@ -157,7 +157,7 @@ end
 before "deploy:started", "deploy_prepare:create_vhost"
 after "deploy_prepare:create_vhost", "deploy_prepare:configure_pg"
 after "deploy_prepare:configure_pg", "deploy:set_owner"
-# after "bundler:install", "deploy:migrate"
+after "bundler:install", "deploy:migrate"
 after "deploy:finished", "deploy:restart"
 after "deploy:updated", "deploy:cleanup"
 
