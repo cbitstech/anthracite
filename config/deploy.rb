@@ -116,18 +116,32 @@ NameVirtualHost *:443
 </VirtualHost>
     EOF
 
-    vhost_config = { staging: staging_vhost_config, production: production_vhost_config, vagrant: vagrant_vhost_config }
-    execute :echo, "\"#{ vhost_config[fetch(:stage)] }\"", ">", "/etc/httpd/conf.d/#{ fetch(:application) }.conf"
+
+    vhost_config = {
+        qa: qa_vhost_config,
+        staging: staging_vhost_config,
+        production: production_vhost_config
+    }
+
+    if fetch(:stage) == :qa
+      execute :echo, "\"#{ vhost_config[:qa] }\"", ">", "/etc/httpd/conf.d/#{ fetch(:application) }_qa.conf"
+    else
+      execute :echo, "\"#{ vhost_config[fetch(:stage)] }\"", ">", "/etc/httpd/conf.d/#{ fetch(:application) }.conf"
+    end
   end
 end
+
 desc 'Configure Postgres'
 task :configure_pg do
   on roles(:web), in: :sequence, wait: 5 do
   execute :bundle, "config", "build.pg", "--with-pg-config=/usr/pgsql-9.3/bin/pg_config"
 end
 end
+
 end
+
 namespace :deploy do
+
   desc 'Change deploy dir owner to apache'
   task :set_owner do
     on roles(:web), in: :sequence, wait: 5 do
@@ -149,9 +163,11 @@ after :restart, :clear_cache do
   on roles(:web), in: :groups, limit: 3, wait: 10 do
   # Here we can do anything such as:
   # within release_path do
-  #   execute :rake, 'cache:clear'
+  # execute :rake, 'cache:clear'
   # end
 end
+end
+
 end
 
 before "deploy:started", "deploy_prepare:create_vhost"
@@ -160,5 +176,3 @@ after "deploy_prepare:configure_pg", "deploy:set_owner"
 after "bundler:install", "deploy:migrate"
 after "deploy:finished", "deploy:restart"
 after "deploy:updated", "deploy:cleanup"
-
-end
