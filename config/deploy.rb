@@ -173,6 +173,6 @@ end
 before "deploy:started", "deploy_prepare:create_vhost"
 after "deploy_prepare:create_vhost", "deploy_prepare:configure_pg"
 after "deploy_prepare:configure_pg", "deploy:set_owner"
-after "bundler:install", "deploy:migrate"
+# after "bundler:install", "deploy:migrate"
 after "deploy:finished", "deploy:restart"
 after "deploy:updated", "deploy:cleanup"
