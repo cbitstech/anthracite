@@ -1,9 +1,6 @@
 {
-"kind" : <%= @event.kind %>,
-"date_emitted" :  "<%= @event.date_emitted %>",
+"kind" : "<%= @event.kind %>",
+"date_recorded" :  "<%= @event.date_emitted %>",
 "payload" : "<%= @event.payload.html_safe %>",
-"shared_secret" : "<%= @event.shared_secret %>",
-"user_ID" : "<%= @event.user_ID %>",
-"user_agent" : "<%= @event.user_agent %>",
-"source" : "<%= @event.source %>"
+"user_ID" : "<%= @event.user_ID %>"
 }

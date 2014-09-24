@@ -7,12 +7,6 @@ class EventsController < ApplicationController
 	end
 
 	def index
-	@events = Event.all
-
-	respond_to do |format|
-		format.html # index.html.erb
-		format.json { render json: @events }
-		end
 	end
 
 	def create
@@ -39,6 +33,7 @@ class EventsController < ApplicationController
 		end
 	end
 
+  # todo: revise permissions? PHI concern?
 	def show
 		@event = Event.find(params[:id])
 	end
@@ -46,5 +41,6 @@ class EventsController < ApplicationController
 	private
 		def event_params
 			params.require(:event).permit(:kind, :payload, :user_ID)
-		end
+    end
+  end
 end
