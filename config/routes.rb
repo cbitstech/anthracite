@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  resources :base_events
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-	resources :events, :users
+	resources :events, :users, :base_events
 
 	root to: "home#index"
 
